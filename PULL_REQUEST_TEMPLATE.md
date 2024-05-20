@@ -15,7 +15,6 @@ Please go through each entry in the below checklist and mark an 'X' if that cond
     - `gis = GIS()`
     - `gis = GIS('home')` or `gis = GIS('pro')`
     - `gis = GIS(profile="your_online_portal")`
-    - `gis = GIS('https://pythonapi.playground.esri.com/portal')`
     - `gis = GIS(profile="your_enterprise_portal")`
 - [ ] If this notebook requires setup or teardown, did you add the appropriate code to `./misc/setup.py` and/or `./misc/teardown.py`?
 - [ ] If this notebook references any portal items that need to be staged on AGOL/Python API playground, did you coordinate with a Python API team member to stage the item the correct way with the `api_data_owner` user?
@@ -24,4 +23,10 @@ Please go through each entry in the below checklist and mark an 'X' if that cond
 - [ ] Consistent voice/tense/narrative style? Thoroughly checked for typos?
 - [ ] All images used like `<img src="base64str_here">` instead of `<img src="https://some.url">`? All map widgets contain a static image preview? (Call `mapview_inst.take_screenshot()` to do so)
 - [ ] All file paths are constructed in an OS-agnostic fashion with `os.path.join()`? (Instead of `r"\foo\bar"`, `os.path.join(os.path.sep, "foo", "bar")`, etc.)
-- [ ] **IF YOU WANT THIS SAMPLE TO BE DISPLAYED ON THE DEVELOPERS.ARCGIS.COM WEBSITE**, ping @ mohi9282 so he can add it to the list for the next deploy 
+- [ ] Is your code formatted using [Jupyter Black](https://www.freecodecamp.org/news/auto-format-your-python-code-with-black/)? You can use Jupyter Black to format your code in the  notebook.
+- [ ] **If this notebook showcases deep learning capabilities, please go through the following checklist:**
+    - [ ] Are the inputs required for `Export Training Data Using Deep Learning` tool published on geosaurus org (api data owner account) and added in the notebook using `gis.content.get` function?
+    - [ ] Is training data zipped and published as Image Collection? Note: Whole folder is zipped with name same as the notebook name.
+    - [ ] Are the inputs required for model inferencing published on geosaurus org (api data owner account) and added in the notebook using `gis.content.get` function? Note: This includes providing test raster and trained model.
+    - [ ] Are the inferenced results displayed using a webmap widget?
+- [ ] **IF YOU WANT THIS SAMPLE TO BE DISPLAYED ON THE DEVELOPERS.ARCGIS.COM WEBSITE**, ping @jyaistMap so he can add it to the list for the next deploy.
